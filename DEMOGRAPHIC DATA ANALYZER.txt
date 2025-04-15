@@ -1,0 +1,26 @@
+import pandas as pd
+
+
+def calculate_demographic_data(print_data=True):
+    # Read data from file
+    df = pd.read_csv('/workspace/boilerplate-demographic-data-analyzer/adult.data.csv')
+
+    # How many of each race are represented in this dataset? This should be a Pandas series with race names as the index labels.
+    race_count = df['race'].value_counts()
+    
+
+    # What is the average age of men?
+    average_age_men = df[df['sex']=='Male']['age'].mean()
+
+    # What is the percentage of people …t,
+        'average_age_men': average_age_men,
+        'percentage_bachelors': percentage_bachelors,
+        'higher_education_rich': higher_education_rich,
+        'lower_education_rich': lower_education_rich,
+        'min_work_hours': min_work_hours,
+        'rich_percentage': rich_percentage,
+        'highest_earning_country': highest_earning_country,
+        'highest_earning_country_percentage':
+        highest_earning_country_percentage,
+        'top_IN_occupation': top_IN_occupation
+    }
